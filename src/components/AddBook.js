@@ -58,7 +58,7 @@ const AddBook = () => {
             <div className="mb-4">
                 <label
                     htmlFor="title"
-                    className="block text-sm font-medium text-custom-palette-500 dark:text-custom-palette-100"
+                    className="block text-sm font-medium text-purple-600 dark:text-peach-100"
                 >
                     Title
                 </label>
@@ -69,13 +69,13 @@ const AddBook = () => {
                     value={book.title}
                     onChange={handleChange}
                     required
-                    className="mt-1 block w-full rounded-md border-custom-palette-300 shadow-sm focus:border-custom-palette-500 focus:ring focus:ring-custom-palette-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-purple-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 dark:bg-purple-500 dark:text-peach-100"
                 />
             </div>
             <div className="mb-4">
                 <label
                     htmlFor="image"
-                    className="block text-sm font-medium text-custom-palette-500 dark:text-custom-palette-100"
+                    className="block text-sm font-medium text-purple-600 dark:text-peach-100"
                 >
                     Image URL
                 </label>
@@ -85,13 +85,13 @@ const AddBook = () => {
                     name="image"
                     value={book.image}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-custom-palette-300 shadow-sm focus:border-custom-palette-500 focus:ring focus:ring-custom-palette-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-purple-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 dark:bg-purple-500 dark:text-peach-100"
                 />
             </div>
             <div className="mb-4">
                 <label
                     htmlFor="author"
-                    className="block text-sm font-medium text-custom-palette-500 dark:text-custom-palette-100"
+                    className="block text-sm font-medium text-purple-600 dark:text-peach-100"
                 >
                     Author
                 </label>
@@ -102,13 +102,13 @@ const AddBook = () => {
                     value={book.author}
                     onChange={handleChange}
                     required
-                    className="mt-1 block w-full rounded-md border-custom-palette-300 shadow-sm focus:border-custom-palette-500 focus:ring focus:ring-custom-palette-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-purple-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 dark:bg-purple-500 dark:text-peach-100"
                 />
             </div>
             <div className="mb-4">
                 <label
                     htmlFor="status"
-                    className="block text-sm font-medium text-custom-palette-500 dark:text-custom-palette-100"
+                    className="block text-sm font-medium text-purple-600 dark:text-peach-100"
                 >
                     Status
                 </label>
@@ -117,7 +117,7 @@ const AddBook = () => {
                     name="status"
                     value={book.status}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-custom-palette-300 shadow-sm focus:border-custom-palette-500 focus:ring focus:ring-custom-palette-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-purple-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 dark:bg-purple-500 dark:text-peach-100"
                 >
                     <option value="want-to-read">Want to Read</option>
                     <option value="currently-reading">Currently Reading</option>
@@ -127,7 +127,7 @@ const AddBook = () => {
             <div className="mb-4">
                 <label
                     htmlFor="series"
-                    className="block text-sm font-medium text-custom-palette-500 dark:text-custom-palette-100"
+                    className="block text-sm font-medium text-purple-600 dark:text-peach-100"
                 >
                     Series
                 </label>
@@ -137,14 +137,14 @@ const AddBook = () => {
                     name="series"
                     value={book.series}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-custom-palette-300 shadow-sm focus:border-custom-palette-500 focus:ring focus:ring-custom-palette-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-purple-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 dark:bg-purple-500 dark:text-peach-100"
                 />
             </div>
             {book.status === "read" && (
                 <div className="mb-4">
                     <label
                         htmlFor="rating"
-                        className="block text-sm font-medium text-custom-palette-500 dark:text-custom-palette-100"
+                        className="block text-sm font-medium text-purple-600 dark:text-peach-100"
                     >
                         Rating
                     </label>
@@ -156,14 +156,14 @@ const AddBook = () => {
                         max="5"
                         value={book.rating}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-custom-palette-300 shadow-sm focus:border-custom-palette-500 focus:ring focus:ring-custom-palette-200 focus:ring-opacity-50"
+                        className="mt-1 block w-full rounded-md border-purple-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 dark:bg-purple-500 dark:text-peach-100"
                     />
                 </div>
             )}
             <div className="mb-4">
                 <label
                     htmlFor="dateStarted"
-                    className="block text-sm font-medium text-custom-palette-500 dark:text-custom-palette-100"
+                    className="block text-sm font-medium text-purple-600 dark:text-peach-100"
                 >
                     Date Started
                 </label>
@@ -173,14 +173,14 @@ const AddBook = () => {
                     name="dateStarted"
                     value={book.dateStarted}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-custom-palette-300 shadow-sm focus:border-custom-palette-500 focus:ring focus:ring-custom-palette-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-purple-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 dark:bg-purple-500 dark:text-peach-100"
                 />
             </div>
             {book.status === "read" && (
                 <div className="mb-4">
                     <label
                         htmlFor="dateFinished"
-                        className="block text-sm font-medium text-custom-palette-500 dark:text-custom-palette-100"
+                        className="block text-sm font-medium text-purple-600 dark:text-peach-100"
                     >
                         Date Finished
                     </label>
@@ -190,13 +190,13 @@ const AddBook = () => {
                         name="dateFinished"
                         value={book.dateFinished}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-custom-palette-300 shadow-sm focus:border-custom-palette-500 focus:ring focus:ring-custom-palette-200 focus:ring-opacity-50"
+                        className="mt-1 block w-full rounded-md border-purple-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 dark:bg-purple-500 dark:text-peach-100"
                     />
                 </div>
             )}
             <button
                 type="submit"
-                className="w-full bg-custom-palette-500 text-white py-2 px-4 rounded-md hover:bg-custom-palette-600 focus:outline-none focus:ring-2 focus:ring-custom-palette-500 focus:ring-opacity-50"
+                className="w-full bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 dark:bg-peach-300 dark:text-purple-600 dark:hover:bg-peach-400"
             >
                 Add Book
             </button>

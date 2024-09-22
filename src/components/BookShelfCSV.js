@@ -5,8 +5,10 @@ import Card from "./Card";
 const BookshelfCSV = ({pageType}) => {
     const [groupedBooks, setGroupedBooks] = useState({});
     const [loading, setLoading] = useState(true);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const fetchBooks = async () => {
             try {
                 setLoading(true);
@@ -50,6 +52,10 @@ const BookshelfCSV = ({pageType}) => {
                 return books.filter(
                     (book) => book["Exclusive Shelf"] === "currently-reading"
                 );
+            case "want-to-read":
+                return books.filter(
+                    (book) => book["Exclusive Shelf"] === "to-read"
+                );
             default:
                 return books;
         }
@@ -81,15 +87,21 @@ const BookshelfCSV = ({pageType}) => {
             return {
                 [pageType === "currently-reading"
                     ? "Currently Reading"
+                    : pageType === "want-to-read"
+                    ? "Want to Read"
                     : "Read Books"]: books,
             };
         }
     };
 
+    if (!mounted) {
+        return null; // or a loading placeholder
+    }
+
     return (
-        <div className="bg-custom-palette-200 p-6 rounded-lg shadow-lg dark:bg-custom-palette-500">
+        <div className="p-6">
             {loading ? (
-                <p className="text-xl font-semibold text-custom-palette-500 dark:text-custom-palette-100">
+                <p className="text-xl font-semibold text-purple-600 dark:text-mauve-200">
                     Loading books...
                 </p>
             ) : (
@@ -98,19 +110,25 @@ const BookshelfCSV = ({pageType}) => {
                         Object.entries(groupedBooks).map(
                             ([groupTitle, books]) => (
                                 <div key={groupTitle} className="mb-8">
-                                    <h2 className="text-2xl font-bold mb-4 text-custom-palette-500 dark:text-custom-palette-100">
+                                    <h2 className="text-2xl font-bold mb-4 text-purple-600 dark:text-mauve-200">
                                         {groupTitle}
                                     </h2>
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                         {books.map((book, index) => (
-                                            <Card key={index} book={book} />
+                                            <Card
+                                                key={index}
+                                                book={book}
+                                                showReadStatus={
+                                                    pageType !== "want-to-read"
+                                                }
+                                            />
                                         ))}
                                     </div>
                                 </div>
                             )
                         )
                     ) : (
-                        <p className="text-xl font-semibold text-custom-palette-500 dark:text-custom-palette-100">
+                        <p className="text-xl font-semibold text-purple-600 dark:text-mauve-200">
                             No books found.
                         </p>
                     )}

@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Nav() {
     return (
-        <nav className="mb-8 bg-custom-palette-200 p-4 rounded-lg shadow-md dark:bg-custom-palette-400">
+        <nav className="">
             <ul className="flex space-x-6 justify-center">
                 <li>
                     <Link
                         href="/"
-                        className="text-custom-palette-500 hover:text-custom-palette-600 dark:text-custom-palette-100 dark:hover:text-custom-palette-200 font-semibold"
+                        className="text-purple-600 hover:text-purple-700 dark:text-mauve-200 dark:hover:text-mauve-400 font-semibold"
                     >
                         Home
                     </Link>
@@ -15,7 +15,7 @@ export default function Nav() {
                 <li>
                     <Link
                         href="/read"
-                        className="text-custom-palette-500 hover:text-custom-palette-600 dark:text-custom-palette-100 dark:hover:text-custom-palette-200 font-semibold"
+                        className="text-purple-600 hover:text-purple-700 dark:text-mauve-200 dark:hover:text-mauve-400 font-semibold"
                     >
                         Currently Reading
                     </Link>
@@ -23,7 +23,7 @@ export default function Nav() {
                 <li>
                     <Link
                         href="/read-books"
-                        className="text-custom-palette-500 hover:text-custom-palette-600 dark:text-custom-palette-100 dark:hover:text-custom-palette-200 font-semibold"
+                        className="text-purple-600 hover:text-purple-700 dark:text-mauve-200 dark:hover:text-mauve-400 font-semibold"
                     >
                         Read Books
                     </Link>
@@ -31,7 +31,7 @@ export default function Nav() {
                 <li>
                     <Link
                         href="/want-to-read"
-                        className="text-custom-palette-500 hover:text-custom-palette-600 dark:text-custom-palette-100 dark:hover:text-custom-palette-200 font-semibold"
+                        className="text-purple-600 hover:text-purple-700 dark:text-mauve-200 dark:hover:text-mauve-400 font-semibold"
                     >
                         Want to Read
                     </Link>
@@ -39,7 +39,7 @@ export default function Nav() {
                 <li>
                     <Link
                         href="/add-book"
-                        className="text-custom-palette-500 hover:text-custom-palette-600 dark:text-custom-palette-100 dark:hover:text-custom-palette-200 font-semibold"
+                        className="text-purple-600 hover:text-purple-700 dark:text-mauve-200 dark:hover:text-mauve-400 font-semibold"
                     >
                         Add Book
                     </Link>

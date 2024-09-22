@@ -2,9 +2,12 @@ import React from "react";
 
 const Star = ({filled}) => {
     return (
+        // bg-mauve-200 border-purple-700 p-4 rounded-lg shadow-md dark:bg-purple-700 dark:border-pink-200 text-purple-600 dark:text-mauve-200
         <svg
             className={`w-5 h-5 ${
-                filled ? "text-custom-palette-300" : "text-custom-palette-200"
+                filled
+                    ? "text-mauve-700 dark:text-mauve-200"
+                    : "text-mauve-300 dark:text-mauve-600"
             }`}
             fill="currentColor"
             viewBox="0 0 20 20"

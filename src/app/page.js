@@ -7,9 +7,9 @@ export const metadata = {
 
 export default function Home() {
     return (
-        <main className="min-h-screen bg-custom-palette-100 py-12 dark:bg-custom-palette-500">
+        <main className="min-h-screen py-12">
             <div className="container mx-auto px-4">
-                <h1 className="text-3xl font-bold mb-6 text-custom-palette-500 dark:text-custom-palette-100">
+                <h1 className="text-3xl text-center font-bold mb-6 text-purple-600 dark:text-mauve-200">
                     Recent Books
                 </h1>
                 <BookshelfCSV pageType="home" />
