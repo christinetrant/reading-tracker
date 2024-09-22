@@ -36,6 +36,14 @@ export default function Nav() {
                         Want to Read
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        href="/add-book"
+                        className="text-custom-palette-500 hover:text-custom-palette-600 dark:text-custom-palette-100 dark:hover:text-custom-palette-200 font-semibold"
+                    >
+                        Add Book
+                    </Link>
+                </li>
             </ul>
         </nav>
     );
